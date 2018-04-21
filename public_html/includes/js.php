@@ -6,9 +6,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.min.js" integrity="sha256-OBi9RJU9sFk/2JEV23eSQSqe/eUK4km5NxGgo/XMiqY=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js" integrity="sha256-Emd9qupGNNjtRpaQjhpA4hn+PWAETkO2GB3gzBL3thM=" crossorigin="anonymous"></script>
 -->
-<script src="http://localhost/development/jquery.min.js"></script>
-<script src="http://localhost/development/popper.min.js"></script>
-<script src="http://localhost/development/bootstrap.min.js"></script>
-<script src="http://localhost/development/all.js"></script>
-<script src="http://localhost/development/Chart.bundle.min.js"></script>
-<script src="http://localhost/development/Chart.min.js"></script>
+<script src="http://blog.com/development/jquery.min.js"></script>
+<script src="http://blog.com/development/popper.min.js"></script>
+<script src="http://blog.com/development/bootstrap.min.js"></script>
+<script src="http://blog.com/development/all.js"></script>
+<script src="http://blog.com/development/Chart.bundle.min.js"></script>
+<script src="http://blog.com/development/Chart.min.js"></script>
