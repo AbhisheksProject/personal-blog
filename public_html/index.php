@@ -11,5 +11,11 @@
     </div>
 
     <?php include('includes/js.php'); ?>
+    <script>
+        $(document).ready(function(){
+            $('.nav-item').removeClass('active');
+            $('.home').addClass('active');
+        });
+    </script>
 </body>
 </html>

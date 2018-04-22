@@ -30,6 +30,7 @@
 ?>
 <?php include('../includes/head.php'); ?>
 <title><?php echo ucwords($me['name']); ?></title>
+<link href="../handlers/photo.php?key=<?php echo $me['id']; ?>" rel="icon" type="image/png" />
 </head>
 <body>
 <?php include('../includes/admin/admin_header.php'); ?>
@@ -45,8 +46,9 @@
 <?php include('../includes/js.php'); ?>
 <script>
     $(document).ready(function(){
+        $('.nav-item').removeClass('active');
+        $('.newpost').addClass('active');
         $('form').submit(function(e){
-            
             e.preventDefault();
             var data = $(this).serialize() + '&id=<?php echo $data['id']; ?>';
             $.ajax({

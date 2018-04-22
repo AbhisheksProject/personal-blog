@@ -48,7 +48,9 @@
     </div>
 <?php include('/includes/js.php'); ?>
 <script>
-    $(document).ready(function(e){
+    $(document).ready(function(){
+        $('.nav-item').removeClass('active');
+        $('.posts').addClass('active');
         $('.delete').click(function(e){
             e.preventDefault();
             $.ajax({

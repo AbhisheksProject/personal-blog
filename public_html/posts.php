@@ -51,5 +51,11 @@
     </div>
 
     <?php include('includes/js.php'); ?>
+    <script>
+        $(document).ready(function(){
+            $('.nav-item').removeClass('active');
+            $('.posts').addClass('active');
+        });
+    </script>
 </body>
 </html>

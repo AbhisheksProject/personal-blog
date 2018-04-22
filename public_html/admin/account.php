@@ -15,6 +15,7 @@
 ?>
 <?php include('../includes/head.php'); ?>
 <title><?php echo ucwords($me['name']); ?></title>
+<link href="../handlers/photo.php?key=<?php echo $me['id']; ?>" rel="icon" type="image/png" />
 <style>
     .hidden{
         display: none;
@@ -71,6 +72,8 @@
 <?php include('../includes/js.php'); ?>
 <script>
     $(document).ready(function(){
+        $('.nav-item').removeClass('active');
+        $('.account').addClass('active');
         $('#image').change(function(){
             $('#image').submit();
         });

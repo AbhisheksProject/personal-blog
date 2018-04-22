@@ -6,16 +6,16 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.php">HOME <span class="sr-only">(current)</span></a>
+      <li class="nav-item home">
+        <a class="nav-link" href="index.php">HOME</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item posts">
         <a class="nav-link" href="posts.php">POSTS</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item contact">
         <a class="nav-link" href="contact.php">CONTACT</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item about">
         <a class="nav-link" href="about.php">ABOUT</a>
       </li>
     </ul>

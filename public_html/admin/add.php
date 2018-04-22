@@ -3,7 +3,15 @@
     if(!isset($_SESSION['loggedin'])){
         header('Location: dashboard.php');
     }
-
+    require_once('../../secure/db.php');
+    $id = addslashes(trim($_SESSION['id']));
+    $query = "SELECT * FROM admin WHERE id = '$id'";
+    $result = $sql->query($query);
+    if($result){
+        if($result->num_rows==1){
+            $me = $result->fetch_assoc();
+        }
+    }
 ?>
 <?php include('../includes/head.php'); ?>
     <title>Abhishek Chatterjee</title>
@@ -55,6 +63,7 @@
         background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
         }
     </style>
+    <link href="../handlers/photo.php?key=<?php echo $me['id']; ?>" rel="icon" type="image/png" />
 </head>
 <body>
     <?php include('../includes/admin/admin_header.php'); ?>
@@ -80,6 +89,8 @@
     <?php include('../includes/js.php'); ?>
     <script>
         $(document).ready(function(){
+            $('.nav-item').removeClass('active');
+            $('.addadmin').addClass('active');
             $("#username").on("change paste", function(){
                 $.ajax({
                     type: 'post',

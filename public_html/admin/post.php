@@ -19,6 +19,7 @@
 ?>
 <?php include('../includes/head.php'); ?>
 <title><?php echo ucwords($me['name']); ?></title>
+<link href="../handlers/photo.php?key=<?php echo $me['id']; ?>" rel="icon" type="image/png" />
 <style>
     .post-time{
         color: gray;
@@ -55,12 +56,13 @@
                 }
             }
         }
-    ?>
-        
+    ?>  
     </div>
 <?php include('../includes/js.php'); ?>
 <script>
     $(document).ready(function(e){
+        $('.nav-item').removeClass('active');
+        $('.newpost').addClass('active');
         $('.delete').click(function(e){
             e.preventDefault();
             $.ajax({

@@ -16,6 +16,7 @@
 ?>
 <?php include('../includes/head.php'); ?>
 <title><?php echo ucwords($me['name']); ?></title>
+<link href="../handlers/photo.php?key=<?php echo $me['id']; ?>" rel="icon" type="image/png" />
 <style>
     .post-time{
         color: gray;
@@ -55,16 +56,19 @@
                 } else {
                     ?>
                         <div class="post-box">
-                            <p class="display-4 text-uppercase">YOu dont have any posts</p>
+                            <p class="display-4 text-uppercase">YOu don't have any posts</p>
                         </div>
                     <?php
                 }
             }
-
-
-
         ?>
     </div>
 <?php include('../includes/js.php'); ?>
+<script>
+    $(document).ready(function(){
+        $('.nav-item').removeClass('active');
+        $('.home').addClass('active');
+    });
+</script>
 </body>
 </html>
