@@ -16,6 +16,9 @@
     if(isset($_GET['key']))
         $key = addslashes(trim($_GET['key']));
     else header('Location: dashboard.php');
+
+    require_once('../libs/Parsedown.php');
+    $parse = new Parsedown();
 ?>
 <?php include('../includes/head.php'); ?>
 <title><?php echo ucwords($me['name']); ?></title>
@@ -39,7 +42,7 @@
                     ?>
                     <h1 class="display-3 text-uppercase"><?php echo $data['title']; ?></h1>
                     <hr>
-                    <p><?php echo $data['content'] ?></p>
+                    <p><?php echo $parse->text($data['content']); ?></p>
                     <span class="post-time floatasd-right">
                         <?php 
                             echo 'Posted ' . date('l jS \of F Y',strtotime(str_replace('-','/', $data['time'])));

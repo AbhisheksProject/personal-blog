@@ -3,6 +3,9 @@
     if(isset($_GET['key']))
         $key = addslashes(trim($_GET['key']));
     else header('Location: posts.php');
+
+    require_once('libs/Parsedown.php');
+    $parse = new Parsedown();
 ?>
 <?php include('/includes/head.php'); ?>
 <title>Abhishek Chatterjee</title>
@@ -38,7 +41,7 @@
                     ?>
                 </small>
                 <hr>
-                <p><?php echo $data['content'] ?></p>
+                <p><?php echo $parse->text($data['content']); ?></p>
                 <?php
             
             }

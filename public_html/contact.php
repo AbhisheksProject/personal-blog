@@ -18,6 +18,9 @@
             width: 500px;
             padding: 25px;
         }
+        i{
+            font-weight: 100;
+        }
     </style>
 </head>
 <body>
