@@ -1,27 +1,6 @@
 <?php include('includes/head.php'); ?>
     <title>Abhishek Chatterjee</title>
-    <style>
-        body{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100vh;
-        }
-        .bb{
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .box{
-            border: 1px solid black;
-            width: 500px;
-            padding: 25px;
-        }
-        i{
-            font-weight: 100;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/layout1.css">
 </head>
 <body>
     <?php include('includes/header.php'); ?>
@@ -40,7 +19,6 @@
                 <i class="fa fa-map-marker" aria-hidden="true"></i> - City, State, Country ZIP
             </p>
         </div>
-    
     </div>
     <?php include('includes/js.php'); ?>
     <script>

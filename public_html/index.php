@@ -9,7 +9,6 @@
             <p class="lead text-center">Welcome to my blog project.</p>
         </div>
     </div>
-
     <?php include('includes/js.php'); ?>
     <script>
         $(document).ready(function(){

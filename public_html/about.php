@@ -1,24 +1,6 @@
 <?php include('includes/head.php'); ?>
     <title>Abhishek Chatterjee</title>
-    <style>
-        body{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100vh;
-        }
-        .bb{
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .box{
-            border: 1px solid black;
-            width: 500px;
-            padding: 25px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/layout1.css">
 </head>
 <body>
     <?php include('includes/header.php'); ?>
@@ -31,7 +13,6 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed accusantium adipisci iure vero facilis, perspiciatis id quos unde libero vitae?</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptas ipsam autem? Laborum, temporibus dolore?</p>
         </div>
-    
     </div>
     <?php include('includes/js.php'); ?>
     <script>

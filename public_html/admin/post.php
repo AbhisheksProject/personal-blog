@@ -1,23 +1,25 @@
 <?php
     session_start();
-    if(!isset($_SESSION['loggedin']))
-        header('Location: ./');
-    
     require_once('../../secure/db.php');
     require_once('../functions/functions.php');
+    require_once('../libs/Parsedown.php');
+    if(!isset($_SESSION['loggedin']))
+        header('Location: ./');
     $id = addslashes(trim($_SESSION['id']));
     $query = "SELECT * FROM admin WHERE id = '$id'";
     $result = $sql->query($query);
     if($result){
         if($result->num_rows==1){
             $me = $result->fetch_assoc();
+        } else {
+            exit();
         }
+    } else {
+        exit();
     }
     if(isset($_GET['key']))
         $key = addslashes(trim($_GET['key']));
     else header('Location: dashboard.php');
-
-    require_once('../libs/Parsedown.php');
     $parse = new Parsedown();
 ?>
 <?php include('../includes/head.php'); ?>
@@ -42,12 +44,13 @@
                     ?>
                     <h1 class="display-3 text-uppercase"><?php echo $data['title']; ?></h1>
                     <hr>
-                    <p><?php echo $parse->text($data['content']); ?></p>
-                    <span class="post-time floatasd-right">
+                    <p><?php echo $parse->line($data['content']); ?></p>
+                    <span class="post-time float-right">
                         <?php 
                             echo 'Posted ' . date('l jS \of F Y',strtotime(str_replace('-','/', $data['time'])));
                         ?>
                     </span>
+                    <br>
                     <br>
                     <div class="btn-group float-right">
                         <a href="edit.php?key=<?php echo $data['id']; ?>" class="btn btn-primary" style="width:80px;border-right:2px solid white;">Edit</a>

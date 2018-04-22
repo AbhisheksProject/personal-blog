@@ -1,16 +1,19 @@
 <?php
     session_start();
+    require_once('../../secure/db.php');
     if(!isset($_SESSION['loggedin']))
         header('Location: ./');
-    
-    require_once('../../secure/db.php');
     $id = addslashes(trim($_SESSION['id']));
     $query = "SELECT * FROM admin WHERE id = '$id'";
     $result = $sql->query($query);
     if($result){
         if($result->num_rows==1){
             $me = $result->fetch_assoc();
+        } else {
+            exit();
         }
+    } else {
+        exit();
     }
 ?>
 <?php include('../includes/head.php'); ?>

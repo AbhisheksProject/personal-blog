@@ -1,18 +1,13 @@
 <?php
     require_once('../secure/db.php');
+    require_once('libs/Parsedown.php');
     if(isset($_GET['key']))
         $key = addslashes(trim($_GET['key']));
-    else header('Location: posts.php');
-
-    require_once('libs/Parsedown.php');
+    else header('Location: posts.php');    
     $parse = new Parsedown();
 ?>
 <?php include('/includes/head.php'); ?>
 <title>Abhishek Chatterjee</title>
-<style>
-    .post-time{
-        color: gray;
-    }
 </style>
 </head>
 <body>
@@ -31,19 +26,18 @@
                     if($result2->num_rows == 1){
                         $row = $result2->fetch_assoc();
                         $name = $row['name'];
+                        ?>
+                            <h1 class="display-3 text-uppercase"><?php echo $data['title']; ?></h1>
+                            <small class="post-author">
+                                <?php
+                                    echo 'Posted by ' . ucwords($name) . ' at ' . date('g:i a l jS \of F Y',strtotime(str_replace('-','/', $data['time']))); 
+                                ?>
+                            </small>
+                            <hr>
+                            <p><?php echo $parse->line($data['content']); ?></p>
+                        <?php
                     }
                 }
-                ?>
-                <h1 class="display-3 text-uppercase"><?php echo $data['title']; ?></h1>
-                <small class="post-author">
-                    <?php
-                        echo 'Posted by ' . ucwords($name) . ' at ' . date('g:i a l jS \of F Y',strtotime(str_replace('-','/', $data['time']))); 
-                    ?>
-                </small>
-                <hr>
-                <p><?php echo $parse->text($data['content']); ?></p>
-                <?php
-            
             }
         }
     ?>
