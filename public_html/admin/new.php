@@ -26,12 +26,15 @@
         <form action="../handlers/post.php" method="post">
             <h1 class="display-1 text-uppercase">post something</h1>
             <input type="text" name="title" class="form-control" placeholder="Title" requird autofocus><br>
+            <?php include('../includes/admin/admin_edit_options.php'); ?>
             <textarea name="content" id="content" cols="30" rows="15" class="form-control" placeholder="Write your post here" requird></textarea>
             <br>
             <button type="submit" class="btn btn-primary float-right" style="width:80px;">Post</button>
         </form>
+        <?php include('../includes/admin/admin_edit_modals.php'); ?>
     </div>
 <?php include('../includes/js.php'); ?>
+<script src="../assets/js/edit_panel.js"></script>
 <script>
     $(document).ready(function(){
         $('.nav-item').removeClass('active');

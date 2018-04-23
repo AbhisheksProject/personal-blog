@@ -44,7 +44,7 @@
                     ?>
                     <h1 class="display-3 text-uppercase"><?php echo $data['title']; ?></h1>
                     <hr>
-                    <p><?php echo $parse->line($data['content']); ?></p>
+                    <p class="markdown-normal-text"><?php echo $parse->text($data['content']); ?></p>
                     <span class="post-time float-right">
                         <?php 
                             echo 'Posted ' . date('l jS \of F Y',strtotime(str_replace('-','/', $data['time'])));
@@ -83,6 +83,7 @@
                 }
             });
         });
+        $('')
     });
 </script>
 </body>
