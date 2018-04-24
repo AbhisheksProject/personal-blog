@@ -2,39 +2,23 @@
 
 ----------
 
-## Table of Contents  
-[1. Description](#description)  
-[2. Technical Details](#tech)  
-[3. Browser Compatibility](#browser)  
-[4. Installation](#installation)  
-[5. Usage](#usage)  
-[6. Credit](#credit)  
-[7. License](#license)  
-    
-<a name="description"/>
-## Description
-Description
+==Description==
+This is the description
 
-<a name="tech"/>
-## Technical Details
-Technical Details
+==Technical Details==
+This is tech details
 
-<a name="browser"/>
-## Browser Compatibility
-Browser Compatibility
+==Browser Compatibility==
+This is browser compatibility
 
-<a name="installation"/>
-## Installation
-Installation
+==Installation==
+This is the installation
 
-<a name="usage"/>
-## Usage
-Usage
+==Usage==
+This is usage
 
-<a name="credit"/>
-## Credit
-Credit
+==Credit==
+This is credit
 
-<a name="license"/>
-## License
-License
+==License==
+This is license
