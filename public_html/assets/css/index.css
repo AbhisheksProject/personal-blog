@@ -1,0 +1,135 @@
+.my-navbar{
+    position: fixed;
+    background-color: rgba(0,0,0,0);
+    z-index: 999;
+}
+.container-fluid{
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+.hero{
+    background-image: url('../images/bg.jpg');
+    background-position: bottom center;
+    background-size: cover;
+    width: 100%;
+}
+.wrapper{
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.wrapper hr{
+    border: 1px solid white;
+    width: 50%;
+}
+.wrapper p{
+    width: 50%;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 768px) {
+    .hero, .wrapper{
+        height: 100vh;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .hero, .wrapper{
+        height: 500px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .hero, .wrapper{
+        height: 400px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .hero, .wrapper{
+        height: 400px;
+    }
+}
+.cate{
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+}
+.cate-box{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.6);
+}
+.post-box{
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.post-title{
+    font-size: 2rem;
+    font-weight:2rem;
+}
+.post-title:hover{
+    text-decoration: none;
+}
+footer{
+    background-color: black;
+    margin: 0 !important;
+    height: 300px;
+}
+.footer-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    width: 100%;
+}
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-nav a, .footer-nav span{
+    margin: 5px;
+}
+.footer-nav a:hover{
+    color: white;
+    text-decoration: none;
+}
+.footer-nav a, footer, .social a {
+    color: rgba(255,255,255,.7);
+}
+.social{
+    display: flex;
+    justify-content: space-between;    
+}
+.social a{
+    margin: 3px;
+    font-size: 1.2rem;
+}
+.social a:hover {
+    color: white;
+}
+.footer-bottom{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: rgba(255, 0, 0, 0.11);
+    font-size: 1.2rem;
+}
+.footer-bottom p{
+    margin-bottom: 0px !important;
+    font-weight: 100;
+}

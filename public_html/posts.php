@@ -7,8 +7,16 @@
 <?php include('includes/head.php'); ?>
     <title>Abhishek Chatterjee</title>
     <style>
+        .my-navbar{
+            position: fixed;
+            background-color: rgba(0,0,0,1);
+            z-index: 999;
+        }
         .post-heading{
             font-size: 1.5rem;
+        }
+        .markdown-normal-text h1, .markdown-normal-text h2, .markdown-normal-text h3, .markdown-normal-text h4, .markdown-normal-text h5, .markdown-normal-text h6, .markdown-normal-text p{
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -33,7 +41,14 @@
                                 ?>
                                     <div class="post-box">
                                         <a href="post.php?key=<?php echo $rows['id']; ?>" class="post-heading text-uppercase"><?php echo $rows['title'] ?></a>
-                                        <div class="markdown-normal-text"><?php echo $parse->line(limit_text($rows['content'], 20)); ?></div>
+                                        <div class="markdown-normal-text">
+                                            <?php 
+                                                //Need some work)
+                                                $content = preg_replace("/!\[[^\]]+\]\([^)]+\)/", "(Image)", $rows['content']);
+                                                $content = str_replace('#','', $content);
+                                                echo $parse->line(limit_text($content, 20));  
+                                            ?>
+                                        </div>
                                         <small class="post-author">
                                         <?php
                                             echo 'Posted by ' . ucwords($name) . ' at ' . date('g:i a l jS \of F Y',strtotime(str_replace('-','/', $rows['time']))); 
