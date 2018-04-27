@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark my-navbar w-100">
+<nav class="navbar navbar-expand-lg position-fixed navbar-dark my-navbar w-100">
   <a class="navbar-brand" href="index.php">BLOG.COM</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -11,6 +11,9 @@
       </li>
       <li class="nav-item posts">
         <a class="nav-link" href="posts.php">POSTS</a>
+      </li>
+      <li class="nav-item categories">
+        <a class="nav-link" href="categories.php">CATEGORIES</a>
       </li>
       <li class="nav-item contact">
         <a class="nav-link" href="contact.php">CONTACT</a>

@@ -11,8 +11,8 @@
 <body>
     <div class="container-fluid">
         <?php include('includes/header.php'); ?>
-        <div class="hero">
-            <div class="wrapper">
+        <div class="hero w-100">
+            <div class="wrapper w-100 d-flex justify-content-center align-items-center flex-column">
                 <h1 class="display-1 text-center text-uppercase text-light">welcome to blog.com</h1>
                 <hr class="text-light bg-light">
                 <p class="text-center text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi ipsum omnis consequatur possimus nemo quidem facere ex, cupiditate rem aliquid veritatis non ad magni sequi unde incidunt consectetur facilis?</p>
@@ -32,8 +32,8 @@
                         while($rows = $result->fetch_assoc()){
                             ?>
                                 <div class="col-12 col-md-4">
-                                    <div class="cate" style="background-image: url('handlers/categories_image.php?key=<?php echo $rows['id']; ?>');">
-                                        <div class="cate-box">
+                                    <div class="cate w-100" style="background-image: url('handlers/categories_image.php?key=<?php echo $rows['id']; ?>');">
+                                        <div class="cate-box w-100 d-flex justify-content-center align-items-center">
                                             <p class="text-center text-light display-4 text-uppercase cate-text" data-replace="<?php echo $rows['description']; ?>"><?php echo $rows['title']; ?></p>
                                         </div>
                                     </div>
@@ -69,8 +69,8 @@
                                         ?>
                                             <div class="col-12 col-md-4 post-box">
                                                 <a href="post.php?key=<?php echo $rows['id']; ?>" class="post-title text-uppercase"><?php echo $rows['title']; ?></a><br>
-                                                <small><?php echo 'Posted by ' . ucwords($name) . ' at ' . date('g:i a l jS \of F Y',strtotime(str_replace('-','/', $rows['time']))); ?></small><br><br>
-                                                <div>
+                                                <small class="post-author"><?php echo 'Posted by ' . ucwords($name) . ' at ' . date('g:i a l jS \of F Y',strtotime(str_replace('-','/', $rows['time']))); ?></small><br><br>
+                                                <div class="post-content">
                                                     <?php 
                                                         //Need some work)
                                                         $content = preg_replace("/!\[[^\]]+\]\([^)]+\)/", "(Image)", $rows['content']);
@@ -95,14 +95,14 @@
             </div>
             <br>
             <div class="text-center">
-            <a href="#" class="btn btn-primary more-post" style="width:80px;">More</a>
+            <a href="posts.php" class="btn btn-primary more-post" style="width:80px;">More</a>
             </div><br>
             
         </div>
         <footer>
-            <div class="footer-top">
+            <div class="footer-top w-100 d-flex justify-content-center align-items-center flex-column">
                 <h1 class="display-4 text-center text-uppercase">blog.com</h1>
-                <nav class="footer-nav text-center text-uppercase">
+                <nav class="footer-nav text-center text-uppercase d-flex justify-content-between">
                     <a href="index.php">HOME</a>
                     <span class="text-light">|</span>
                     <a href="posts.php">POSTS</a>
@@ -111,7 +111,7 @@
                     <span class="text-light">|</span>
                     <a href="about.php">ABOUT</a>
                 </nav>
-                <div class="social text-center">
+                <div class="social text-center d-flex justify-content-between">
                     <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
                     <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                     <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
@@ -119,7 +119,7 @@
                     <a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom text-center">
+            <div class="footer-bottom text-center w-100">
                 <p class="text-white">Developed &amp; Designed by Abhishek Chatterjee</p>
             </div>
         </footer>    

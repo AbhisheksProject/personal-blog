@@ -2,6 +2,9 @@
 
 This is a simple personal blogging website project where anyone can write blogs.
 
+<p align="center">
+	<img alt="screenshot 01" src="readme/01.png" />
+</p>
 
 ## NOTE - This project is not complete. It is still under development. That is why many things are incomplete. Also the documentation is incomplete. I am working in this project and I hope I will finish this project soon.
 
@@ -15,7 +18,8 @@ This is a simple personal blogging website project where anyone can write blogs.
 - [Browser Compatibilty](#browser)
 - [Build With](#build)
 - [Usage](#usage)
-- [Author](#author)
+- [Credit](#credit)
+- [Screenshots](#screenshots)
 
 ### Introduction
 
@@ -69,6 +73,8 @@ This is the usage part
 
 This is the credit part
 
-### Build With
+### Screenshots
 
-This is the build with part
+<p align="center">
+	<img alt="screenshot 01" src="readme/01.png" />
+</p>

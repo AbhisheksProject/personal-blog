@@ -34,7 +34,7 @@
                                 ?>
                             </small>
                             <hr>
-                            <p><?php echo $parse->line($data['content']); ?></p>
+                            <p><?php echo $parse->text($data['content']); ?></p>
                         <?php
                     }
                 }

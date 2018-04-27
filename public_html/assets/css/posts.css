@@ -1,0 +1,27 @@
+.container-fluid{
+    padding: 0 !important;
+}
+.my-navbar{
+    position: fixed;
+    background-color: rgba(0,0,0,1);
+    z-index: 999;
+}
+form{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+form input{
+    width: 300px !important;
+}
+
+
+
+
+
+.post-heading{
+    font-size: 1.5rem;
+}
+.markdown-normal-text h1, .markdown-normal-text h2, .markdown-normal-text h3, .markdown-normal-text h4, .markdown-normal-text h5, .markdown-normal-text h6, .markdown-normal-text p{
+    font-size: 1rem;
+}
