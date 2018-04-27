@@ -21,6 +21,7 @@ This is a simple personal blogging website project where anyone can write blogs.
 - [Credit](#credit)
 - [Screenshots](#screenshots)
 
+
 ### Introduction
 
 This project is a simple blogging website project. In it, anyone can post blogs. 
